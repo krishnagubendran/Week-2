@@ -1,0 +1,26 @@
+/*
+Q9: Neon Number [Medium]
+- Input: 9
+Output: Neon Number
+- Input: 1
+Output: Neon Number
+//for a given number make a square for that and sum the digits of squared values..if that digit's sum equals to the original number it's called neon number
+It seems only the 0, 1, 9 is Neon all are not a neon.
+*/
+package week2;
+import java.util.Scanner;
+public class NeonNumber {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n =sc.nextInt(), sum=0, temp=n, digit, sq;
+		sq = n*n;
+		while(sq >0) {
+			digit = sq % 10;
+			sum += digit;
+			sq /=10;
+		}
+		if(temp == sum) System.out.println("Neon Number");
+		else System.out.println("Not Neon Number");
+		sc.close();
+	}
+}
