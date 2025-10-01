@@ -1,0 +1,21 @@
+/*
+Q1: Print Digits (Right to Left) [Easy]
+- Input: 1234
+Output: 4 3 2 1
+- Input: 1001
+Output: 1 0 0 1
+*/
+package week2;
+import java.util.Scanner;
+public class PrintDigitsRtoL {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(), digit;
+		while(n>0) {
+			digit = n % 10;
+			System.out.print(digit + " ");
+			n /=10;
+		}
+	sc.close();
+ }
+}
