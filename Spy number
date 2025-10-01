@@ -1,0 +1,25 @@
+/*
+Q8: Spy Number [Medium]
+- Input: 1124
+Output: Spy Number
+- Input: 123
+Output: Not Spy Number 
+{Number where the sum of its individual digits is equal to the product of its individual digits}
+*/
+package week2;
+import java.util.Scanner;
+public class SpyNumber {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(), digit, sum=0, prod =1;;
+		while(n>0) {
+			digit = n %10;
+			sum += digit;
+			prod *= digit;
+			n /=10;
+		}
+		if(sum == prod) System.out.println("Spy Number");
+		else System.out.println("Not Spy Number");
+		sc.close();
+	}
+}
