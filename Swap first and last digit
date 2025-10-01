@@ -1,0 +1,30 @@
+/*
+Q17: Swap First and Last Digit [Medium}
+- Input: 12345
+Output: 52341
+- Input: 708
+Output: 807 
+*/
+package week2;
+import java.util.Scanner;
+public class SwapFirstAndLastDigit {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		int count=0, temp=n;
+		while(n>0) {
+			count++;
+			n /= 10;
+		}
+		int arr[] = new int[count];
+		String name = Integer.toString(temp);
+		for(int i=0; i<count; i++) {
+			arr[i] = name.charAt(i);
+		}
+		int temp2 = arr[0];
+		arr[0] = arr[count-1];
+		arr[count-1] = temp2;
+		for(int a:arr) System.out.print((char)a);
+		sc.nextInt();
+	}
+}Swap 
