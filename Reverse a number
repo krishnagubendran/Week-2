@@ -1,0 +1,22 @@
+/*
+Q10: Reverse a Number [Easy]
+- Input: 1234
+Output: 4321
+- Input: 560
+Output: 65
+*/
+package week2;
+import java.util.Scanner;
+public class ReverseaNumber {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt(), digit, rev=0;
+		while(n>0) {
+			digit = n %10;
+			rev = rev*10 + digit;
+			n /=10;
+		}
+		System.out.println(rev);
+		sc.close();
+	}
+}
